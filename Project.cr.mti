@@ -6,6 +6,24 @@ Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
 -- Compiling entity FullAdder
 -- Compiling architecture arch_FullAdder of FullAdder
 
+} {} {}} {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/add.vhd} {1 {vcom -work work -2002 -explicit {E:\CCE Files\Semster6\arch\spring18\Computer-Architecture\add.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity add
+-- Compiling architecture sum of add
+
+} {} {}} {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/ALU.vhd} {1 {vcom -work work -2002 -explicit {E:\CCE Files\Semster6\arch\spring18\Computer-Architecture\ALU.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ALU
+-- Compiling architecture ALU_arch of ALU
+
 } {} {}} {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/16bitAdder.vhd} {1 {vcom -work work -2002 -explicit {E:\CCE Files\Semster6\arch\spring18\Computer-Architecture\16bitAdder.vhd}
 Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
 -- Loading package STANDARD
