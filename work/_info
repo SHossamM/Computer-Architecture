@@ -4,7 +4,7 @@ K3
 cModel Technology
 dC:\Users\ESCA\Desktop
 Eadd
-Z0 w1523612708
+Z0 w1523628654
 Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
@@ -16,7 +16,7 @@ L5
 Ve8XdkMH28P1HUULA8?ACW0
 Z7 OV;C;10.1b;51
 32
-Z8 !s108 1523612715.146000
+Z8 !s108 1523629706.533000
 Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:\CCE Files\Semster6\arch\spring18\Computer-Architecture\add.vhd|
 Z10 !s107 E:\CCE Files\Semster6\arch\spring18\Computer-Architecture\add.vhd|
 Z11 o-work work -2002 -explicit -O0
@@ -41,7 +41,7 @@ R12
 !s100 ?ci63]Wif;^gdO;MbVAM80
 !i10b 1
 Ealu
-Z13 w1523623865
+Z13 w1523629737
 R1
 R2
 R3
@@ -55,7 +55,7 @@ V?lYMV?bb[kifM4W>Vi^GE3
 R7
 32
 !i10b 1
-Z16 !s108 1523623874.394000
+Z16 !s108 1523629741.843000
 Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:\CCE Files\Semster6\arch\spring18\Computer-Architecture\ALU.vhd|
 Z18 !s107 E:\CCE Files\Semster6\arch\spring18\Computer-Architecture\ALU.vhd|
 R11
@@ -67,8 +67,8 @@ R3
 Z19 DEx4 work 3 alu 0 22 ?lYMV?bb[kifM4W>Vi^GE3
 l16
 L14
-V;;>F:TaHZCdL14WT7nWoI3
-!s100 _ToHo>BWTGllYBH@m8G:c3
+V3XLQb=d4ID=bFNgRa1QH00
+!s100 Ti=IjA6lffeT4GARnGW6c2
 R7
 32
 !i10b 1

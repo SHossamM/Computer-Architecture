@@ -15,7 +15,7 @@ entity add is
      begin
   si<=signed(a) + signed(b);
   sii<=signed(a) - signed(b);
-  siii<=a sll 4;
+  siii<=signed(a) sll 4;
   
    end  architecture sum;
 

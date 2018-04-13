@@ -39,7 +39,11 @@ Architecture ALU_arch of ALU is
       
        
             
-            negativeFlag<='1' when (resultExtended(15 downto 0)<"0000000000000000") else
+     negativeFlag<='1' when (resultExtended(15 downto 0)<"0000000000000000") else
                           '0' ;
+            
+      overflowFlag<='1' when (((a(15)='0' and b(15)='0' and resultExtended(15)='1') or (a(15)='1' and b(15)='1' and resultExtended(15)='0')) and (aluOperation="0001") else
+                    '0';
+                          
       
   end ALU_arch;
