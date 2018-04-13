@@ -25,8 +25,8 @@ Architecture ALU_arch of ALU is
                       signed(a(0)&cin&a(15 downto 1))      when"0111",--RRC
                       '0'&(signed(a) sll to_integer(signed(b)) )     when"1000",--sHL
                       '0'&((signed(a)) srl to_integer(signed(b)) )     when"1001",--SHR
-                      not (signed(a))               when"1010",--NOT
-                      not (signed(a))+1             when"1011",--NEG
+                      '0'&(not (signed(a))  )             when"1010",--NOT
+                     '0'&( not (signed(a))+1 )            when"1011",--NEG
                       '0'&(signed(a) +1)            when"1100",--INC
                       '0'&(signed(a) -1)            when"1101",--DEC
                       (others => '0')                   when others;
