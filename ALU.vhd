@@ -1,0 +1,45 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity ALU is
+  port(aluOperation:in std_logic_vector(3 downto 0);
+       a,b: in std_logic_vector(15 downto 0);
+       cin: in std_logic;
+       result: out  std_logic_vector(15 downto 0);
+       carryFalg,ZeroFlag,overflowFlag,negativeFlag: out std_logic
+     );
+end ALU;
+
+Architecture ALU_arch of ALU is
+      signal resultExtended: signed(16 downto 0);
+    begin
+  
+  with aluOperation select
+    resultExtended<=  '0'&signed(a)                 when"0000",--MOV 
+                      '0'&(signed(a)+signed(b))     when "0001",--ADD
+                      '0'&(signed(a)-signed(b))     when "0010",--SUB
+                      '0'&(signed(a) and signed(b)) when"0011",--AND
+                      '0'&(signed(a) or signed(b))  when"0100",--OR
+                      signed(a(15)& a(14 downto 0)&cin)      when"0101",--RLC
+                      signed(a(0)&cin&a(15 downto 1))      when"0111",--RRC
+                      '0'&(signed(a) sll to_integer(signed(b)) )     when"1000",--sHL
+                      '0'&((signed(a)) srl to_integer(signed(b)) )     when"1001",--SHR
+                      '0'&(not (signed(a))  )             when"1010",--NOT
+                     '0'&( not (signed(a))+1 )            when"1011",--NEG
+                      '0'&(signed(a) +1)            when"1100",--INC
+                      '0'&(signed(a) -1)            when"1101",--DEC
+                      (others => '0')                   when others;
+                      
+      result<=std_logic_vector(resultExtended(15 downto 0));
+      carryFalg<=resultExtended(16);
+      with resultExtended(15 downto 0) select
+      ZeroFlag<='1' when "0000000000000000",
+                '0' when others;
+      
+       
+            
+            negativeFlag<='1' when (resultExtended(15 downto 0)<"0000000000000000") else
+                          '0' ;
+      
+  end ALU_arch;
