@@ -1,0 +1,10 @@
+1-decided  to use + and - of signed library and that the assembler will enter the 2's complement for all negative numbers
+2- a) two unsigned numbers were added and the result is larger than "capacity" of register where it is saved. Ex: we wanna add two 8 bit numbers and save result in 8 bit register. In your example: 255 + 9 = 264 which is more that 8 bit register can store. So the value "8" will be saved there (264 & 255 = 8) and CF flag will be set.
+
+b) two unsigned numbers were subtracted and we subtracted the bigger one from the smaller one. Ex: 1-2 will give you 255 in result and CF flag will be set.
+
+
+special case in overflow flag bydrb feha lma tkon -2- -3 
+
+
+in shift kan fe moshkla  bsb el forwarding
