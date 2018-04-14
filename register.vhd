@@ -11,7 +11,7 @@ end Registern;
 
 Architecture Registerarch of Registern is
 begin
-Process (Clk,Rst,enable)
+Process (Clk,Rst)
 begin
 if Rst = '1' then
 q <= (others=>'0');
