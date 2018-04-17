@@ -23,6 +23,7 @@ signal Regdatain6 : std_logic_vector(15 downto  0);
 signal Regdataout6 : std_logic_vector(15 downto 0);
 signal enable1,enable2,enable3,enable4,enable5,enable6 : std_logic ;
 Component Registern is
+Generic ( n : integer := 8);
 port( Clk,Rst : in std_logic;
 d : in std_logic_vector(15 downto 0);
 q : out std_logic_vector(15 downto 0);
@@ -36,9 +37,9 @@ if(Reset = '1')
 then 
 Port1data <= "0000000000000000";
 Port2data <= "0000000000000000";
-else 
+elsif (enable ='1') then
 	if (clk='1') then
-	if(W_Enable='1') then
+	if(W_Enable='1' ) then
 		if(W_selector="000")then 
 		enable1 <='1' ;
 		enable2 <='0' ;
@@ -94,6 +95,8 @@ else
 	null;	     
 	end if;
 end if;
+else 
+null;
 end if;
  if(clk='0') then
 	if(Read_Enable ='1') then 
@@ -134,10 +137,10 @@ if(port1_selec="000") then
 	else null;
 	end if;
 	end process;
-Reg1 : Registern generic map(n=>16) port map(clk,Reset,Regdatain1,Regdataout1,enable1);
-Reg2 : Registern generic map(n=>16) port map(clk,Reset,Regdatain2,Regdataout2,Enable2);
-Reg3 : Registern generic map(n=>16) port map(clk,Reset,Regdatain3,Regdataout3,Enable3);
-Reg4 : Registern generic map(n=>16) port map(clk,Reset,Regdatain4,Regdataout4,Enable4);
-Reg5 : Registern generic map(n=>16) port map(clk,Reset,Regdatain5,Regdataout5,Enable5);
-Reg6 : Registern generic map(n=>16) port map(clk,Reset,Regdatain6,Regdataout6,Enable6);
+Reg1 : Registern generic map(n=>16) port map(clk,Reset,Regdatain1,Regdataout1,enable1 );
+Reg2 : Registern generic map(n=>16) port map(clk,Reset,Regdatain2,Regdataout2,Enable2 );
+Reg3 : Registern generic map(n=>16) port map(clk,Reset,Regdatain3,Regdataout3,Enable3 );
+Reg4 : Registern generic map(n=>16) port map(clk,Reset,Regdatain4,Regdataout4,Enable4  );
+Reg5 : Registern generic map(n=>16) port map(clk,Reset,Regdatain5,Regdataout5,Enable5 );
+Reg6 : Registern generic map(n=>16) port map(clk,Reset,Regdatain6,Regdataout6,Enable6 );
 end Registerfilearch ;

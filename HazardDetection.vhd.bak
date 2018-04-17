@@ -12,6 +12,6 @@ end HazardDetection ;
 Architecture HazardDetectionarch of HazardDetection is 
 begin
 
-StallSignal <= '1' when (ID_EX_MemRead ='1') and ((ID_Ex_Rdestination = IF_ID_Rdestination ) or (ID_Ex_Rdestination = IF_ID_Rdestination)) else
+StallSignal <= '1' when (ID_EX_MemRead ='1') and ((ID_Ex_Rdestination = IF_ID_Rdestination ) or (ID_Ex_Rdestination = IF_ID_RSource)) else
 '0';
 end HazardDetectionarch;

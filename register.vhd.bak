@@ -11,19 +11,14 @@ end Registern;
 
 Architecture Registerarch of Registern is
 begin
-Process (Clk,Rst,enable)
+Process (Clk,Rst)
 begin
 if Rst = '1' then
 q <= (others=>'0');
-elsif (Clk='1' ) then
+elsif (Clk='0' ) then
 if enable = '1' then 
 q <= d;
 end if;
-else 
-if enable = '1' then 
-q <= d;
-end if;
-
 end if;
 end process;
 end Registerarch;
