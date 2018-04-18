@@ -1,10 +1,156 @@
-{E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/FullAdder.vhd} {1 {vcom -work work -2002 -explicit {E:\CCE Files\Semster6\arch\spring18\Computer-Architecture\FullAdder.vhd}
+{E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/AluDecode_integrate.vhd} {1 {vcom -work work -2002 -explicit {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/AluDecode_integrate.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Dcode_ALU_Integrate
+-- Compiling architecture Dcode_ALU_Integrate_arc of Dcode_ALU_Integrate
+
+} {} {}} {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-FetchUnitBuffer.vhd} {1 {vcom -work work -2002 -explicit {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-FetchUnitBuffer.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity PMFetchUnitBuffer
+-- Compiling architecture archPMFetchUnitBuffer of PMFetchUnitBuffer
+
+} {} {}} {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/QProject-registerBit.vhd} {1 {vcom -work work -2002 -explicit {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/QProject-registerBit.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Reg
+-- Compiling architecture Reg_arch of Reg
+
+} {} {}} {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/HazardDetection.vhd} {1 {vcom -work work -2002 -explicit {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/HazardDetection.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity HazardDetection
+-- Compiling architecture HazardDetectionarch of HazardDetection
+
+} {} {}} {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/ALU.vhd} {1 {vcom -work work -2002 -explicit {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/ALU.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ALU
+-- Compiling architecture ALU_arch of ALU
+
+} {} {}} {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/FullAdder.vhd} {1 {vcom -work work -2002 -explicit {E:\CCE Files\Semster6\arch\spring18\Computer-Architecture\FullAdder.vhd}
 Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity FullAdder
 -- Compiling architecture arch_FullAdder of FullAdder
+
+} {} {}} {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/ForwardingUnit.vhd} {1 {vcom -work work -2002 -explicit {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/ForwardingUnit.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity forwardingUnit
+-- Compiling architecture forwardingUnit_arch of forwardingUnit
+
+} {} {}} {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-StaticPredictionUnit.vhd} {1 {vcom -work work -2002 -explicit {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-StaticPredictionUnit.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity PStaticPredictionUnit
+-- Compiling architecture archPStaticPredictionUnit of PStaticPredictionUnit
+
+} {} {}} {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-MemoryUnit.vhd} {1 {vcom -work work -2002 -explicit {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-MemoryUnit.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity PMemoryUnit
+-- Compiling architecture archPMemoryUnit of PMemoryUnit
+
+} {} {}} {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-Memory.vhd} {1 {vcom -work work -2002 -explicit {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-Memory.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity PMemory
+-- Compiling architecture archPMemory of PMemory
+
+} {} {}} {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux2x1.vhd} {1 {vcom -work work -2002 -explicit {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux2x1.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Mux2x1
+-- Compiling architecture Mux2x1_arch of Mux2x1
+
+} {} {}} {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/register.vhd} {1 {vcom -work work -2002 -explicit {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/register.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Registern
+-- Compiling architecture Registerarch of Registern
+
+} {} {}} {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-TEST-Mem-WB.vhd} {1 {vcom -work work -2002 -explicit {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-TEST-Mem-WB.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity PMemWB
+-- Compiling architecture archPMemWB of PMemWB
+
+} {} {}} {E:/CCE Files/Semster6/arch/spring18/labs/lab6/mem.vhd} {1 {vcom -work work -2002 -explicit {E:/CCE Files/Semster6/arch/spring18/labs/lab6/mem.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ram
+-- Compiling architecture ram_arch of ram
+
+} {} {}} {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux4x1_1bit.vhd} {1 {vcom -work work -2002 -explicit {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux4x1_1bit.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Mux4x1_1bit
+-- Compiling architecture Mux4x1_1bit_arch of Mux4x1_1bit
+
+} {} {}} {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-MemoryUnitBuffer.vhd} {1 {vcom -work work -2002 -explicit {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-MemoryUnitBuffer.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity PMemoryUnitBuffer
+-- Compiling architecture archPMemoryUnitBuffer of PMemoryUnitBuffer
+
+} {} {}} {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux4x1.vhd} {1 {vcom -work work -2002 -explicit {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux4x1.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Mux4x1
+-- Compiling architecture Mux4x1_arch of Mux4x1
+
+} {} {}} {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-WritebackUnit.vhd} {1 {vcom -work work -2002 -explicit {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-WritebackUnit.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity PWriteBack
+-- Compiling architecture arch_PWriteBack of PWriteBack
 
 } {} {}} {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/add.vhd} {1 {vcom -work work -2002 -explicit {E:\CCE Files\Semster6\arch\spring18\Computer-Architecture\add.vhd}
 Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
@@ -15,14 +161,22 @@ Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
 -- Compiling entity add
 -- Compiling architecture sum of add
 
-} {} {}} {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/ALU.vhd} {1 {vcom -work work -2002 -explicit {E:\CCE Files\Semster6\arch\spring18\Computer-Architecture\ALU.vhd}
+} {} {}} {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux8x1.vhd} {1 {vcom -work work -2002 -explicit {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux8x1.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Mux8x1
+-- Compiling architecture Mux8x1_arch of Mux8x1
+
+} {} {}} {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-FetchUnit.vhd} {1 {vcom -work work -2002 -explicit {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-FetchUnit.vhd}
 Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity ALU
--- Compiling architecture ALU_arch of ALU
+-- Compiling entity PFetchUnit
+-- Compiling architecture archPFetchUnit of PFetchUnit
 
 } {} {}} {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/16bitAdder.vhd} {1 {vcom -work work -2002 -explicit {E:\CCE Files\Semster6\arch\spring18\Computer-Architecture\16bitAdder.vhd}
 Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
@@ -31,5 +185,13 @@ Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
 -- Loading package std_logic_1164
 -- Compiling entity n_bitAdder
 -- Compiling architecture arch_n_bitadder of n_bitAdder
+
+} {} {}} {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/decoder.vhd} {1 {vcom -work work -2002 -explicit {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/decoder.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Registerfile
+-- Compiling architecture Registerfilearch of Registerfile
 
 } {} {}}

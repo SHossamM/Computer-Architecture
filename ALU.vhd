@@ -5,9 +5,9 @@ use ieee.numeric_std.all;
 entity ALU is
   port(aluOperation:in std_logic_vector(3 downto 0);
        a,b: in std_logic_vector(15 downto 0);
-       cin: in std_logic;
+       cin,enable: in std_logic;
        result: out  std_logic_vector(15 downto 0);
-       carryFalg,ZeroFlag,overflowFlag,negativeFlag: out std_logic
+       carryFlag,ZeroFlag,overflowFlag,negativeFlag: out std_logic
      );
 end ALU;
 
@@ -31,15 +31,16 @@ Architecture ALU_arch of ALU is
                       '0'&(signed(a) -1)            when"1101",--DEC
                       (others => '0')                   when others;
                       
-      result<=std_logic_vector(resultExtended(15 downto 0));
-      carryFalg<=resultExtended(16);
+      result<=std_logic_vector(resultExtended(15 downto 0)) when enable='1' else
+              (others=>'0');
+      carryFlag<=resultExtended(16);
       with resultExtended(15 downto 0) select
       ZeroFlag<='1' when "0000000000000000",
                 '0' when others;
       
-       
+      
             
-     negativeFlag<='1' when (resultExtended(15 downto 0)<"0000000000000000") else
+     negativeFlag<='1' when (resultExtended(15)='1') else
                           '0' ;
             
       overflowFlag<='1' when (((a(15)='0' and b(15)='0' and resultExtended(15)='1') or (a(15)='1' and b(15)='1' and resultExtended(15)='0')) and (aluOperation="0001")) else

@@ -1,0 +1,7 @@
+mux number -> 4
+
+test alu
+test fu
+
+
+I think carry may be wrong :( check it later please
