@@ -26,11 +26,11 @@ architecture forwardingUnit_arch of forwardingUnit is
     
     
      a_select<="01"  when((exec_mem_regwrite='1') and (exec_mem_Rd = id_exec_Rs )) else --alu-alu forwarding --current stage in exec will write back in same register to beread in exec-->do i need regread siganl here?
-              "10"  when (mem_wb_regwrite='1' and mem_wb_Rd=id_exec_Rs) else  --full forwarding --alu result in exec_mem_buffer 
+              "10"  when (mem_wb_regwrite='1' and mem_wb_Rd=exec_mem_Rs) else  --full forwarding --alu result in exec_mem_buffer 
               control_a_select ; --normal operation no hazards
     
      b_select<="01" when(exec_mem_regwrite='1' and exec_mem_Rd=id_exec_Rd) else  --current stage in exec will write back in same register to beread in exec
-               "10" when(mem_wb_regwrite='1' and mem_wb_Rd=id_exec_Rd) else --alu result in exec_mem_buffer  
+               "10" when(mem_wb_regwrite='1' and mem_wb_Rd=exec_mem_Rd) else --alu result in exec_mem_buffer  
                control_b_select ;
 
 

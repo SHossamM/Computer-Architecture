@@ -76,7 +76,7 @@ R12
 !s100 >8a^7[1k;9X1?_AS5abXT3
 !i10b 1
 Efirst_integrate
-Z19 w1524005786
+Z19 w1524006071
 R2
 R3
 R4
@@ -89,7 +89,7 @@ VNAF91D@;ldbYW=K^N5JNM3
 R7
 32
 !i10b 1
-Z22 !s108 1524005791.492000
+Z22 !s108 1524021614.331000
 Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/new_integration.vhd|
 Z24 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/new_integration.vhd|
 R11
@@ -98,10 +98,10 @@ Afirst_integrate_arch
 R2
 R3
 Z25 DEx4 work 15 first_integrate 0 22 NAF91D@;ldbYW=K^N5JNM3
-l128
+l142
 L20
-VVQIWIJKbeSQ4]<CJQ797Q0
-!s100 IKS_O^i>mD_V9NhXbTB`W3
+V;[m0G3CFNdXK>fFGEd]PR3
+!s100 D>k`T_hXP^c>1CTgN;j^B0
 R7
 32
 !i10b 1
@@ -111,7 +111,7 @@ R24
 R11
 R12
 Eforwardingunit
-Z26 w1523970985
+Z26 w1524021522
 R2
 R3
 R4
@@ -122,7 +122,7 @@ L4
 VoR3MOM<;4zGh77<J_9dBR1
 R7
 32
-Z29 !s108 1523972744.966000
+Z29 !s108 1524021596.430000
 Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/ForwardingUnit.vhd|
 Z31 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/ForwardingUnit.vhd|
 R11
@@ -135,7 +135,7 @@ R3
 DEx4 work 14 forwardingunit 0 22 oR3MOM<;4zGh77<J_9dBR1
 l25
 L24
-V5]62b9W6W3915`Ojfde?`2
+V0d5DOjclAfmaj[H_5_EhQ0
 R7
 32
 R29
@@ -143,7 +143,7 @@ R30
 R31
 R11
 R12
-!s100 z]6^e=I8E>E=J<6U<JdlR0
+!s100 3o<M>DL>>o^3HhHHnK`@U0
 !i10b 1
 Ehazarddetection
 Z32 w1523972364
