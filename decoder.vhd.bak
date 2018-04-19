@@ -23,7 +23,7 @@ signal Regdatain6 : std_logic_vector(15 downto  0);
 signal Regdataout6 : std_logic_vector(15 downto 0);
 signal enable1,enable2,enable3,enable4,enable5,enable6 : std_logic ;
 Component Registern is
-Generic ( n : integer := 16);
+Generic ( n : integer := 8);
 port( Clk,Rst : in std_logic;
 d : in std_logic_vector(15 downto 0);
 q : out std_logic_vector(15 downto 0);
@@ -31,7 +31,7 @@ enable : std_logic );
 end component;
 begin
 
-process(clk,Reset,Regdataout1,Regdataout2,Regdataout3,Regdataout4,Regdataout5,Regdataout6,W_value)
+process(Reset,Regdataout1,Regdataout2,Regdataout3,Regdataout4,Regdataout5,Regdataout6,W_value)
 begin 
 if(Reset = '1')
 then 

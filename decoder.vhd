@@ -31,7 +31,7 @@ enable : std_logic );
 end component;
 begin
 
-process(clk,Reset,Regdataout1,Regdataout2,Regdataout3,Regdataout4,Regdataout5,Regdataout6,W_value)
+process(Reset,Regdataout1,Regdataout2,Regdataout3,Regdataout4,Regdataout5,Regdataout6,W_value,w_selector)
 begin 
 if(Reset = '1')
 then 
