@@ -1,0 +1,2 @@
+1-kamalw ahmed leh 7aten f memory pc b 16 w address 10 bits bs?
+2- pc is 16 bit so i only tak pc(9 downto 0) s7?

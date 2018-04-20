@@ -151,26 +151,28 @@ component n_bitAdder is
       );
       
     end component;
+------------------------end of components---------------------------------------
 
-signal   Port1data,Port2data, Port1dataout,Port2dataout ,Alu_input1,ALU_input2: std_logic_vector(15 downto 0);
+----------------------signals----------------------------------------------------
+signal  Alu_input1,ALU_input2: std_logic_vector(15 downto 0);
 signal   ccr_regin:std_logic_vector(3 downto 0);
 signal   ccr_mux1_in : std_logic_vector(2 downto 0);
 signal  carryFlag,ZeroFlag,overflowFlag,negativeFlag: std_logic;
 signal  W_selector:std_logic_vector(2 downto 0);
---fectch outputs
-signal Imediate_fetch_out ,fetch_input_out:std_logic_vector(15 downto 0);
+---------------------------------fectch outputs-------------------------------
+signal Imediate_fetch_out ,fetch_input_out,fetch_PC_out:std_logic_vector(15 downto 0);
 
---Decode outputs
-signal Imediate_Decode_out, Decode_SP_Out,decode_input_out: std_logic_vector(15 downto 0);
+---------------------------------Decode outputs-------------------------------
+signal Port1data,Port2data,Port1dataout,Port2dataout,Imediate_Decode_out, Decode_SP_Out,decode_input_out: std_logic_vector(15 downto 0);
 signal ccr_regout: std_logic_vector(3 downto 0);
 signal Decode_MR_out, Decode_MW_out,decode_WB_signal_out,decode_destination_select_out,decode_aenable_out: std_logic;
 signal Decode_WB_Dest_Select_out, Decode_Mem_Write_Address_Select_out: std_logic_vector(1 downto 0);
 signal Decode_Mem_Read_Address_Select_out,decode_wb_signal_select_out	: std_logic_vector(2 downto 0);
-signal  Decode_PC_Out : std_logic_vector (9 downto 0);
+signal  Decode_PC_Out : std_logic_vector (15 downto 0);
+---------------------------------------------------------------------------------------------
 
 
-
---Exe outputs
+---------------------------------Exe outputs-------------------------------
 signal EX_MEM_ALUResult, Imediate_Exe_out, result, Execute_SP_Out, exe_Rs_out, exe_Rd_out,
        execute_input_out: std_logic_vector(15 downto 0);
 signal Execute_CCR_Select1_out,execute_WB_signal_out,execute_destination_select_out: std_logic;
@@ -179,47 +181,51 @@ signal exe_ccr_regout: std_logic_vector(3 downto 0);
 signal exe_MR_out, exe_MW_out: std_logic;
 signal exe_WB_Dest_Select_out, exe_Mem_Write_Address_Select_out,A_Select,B_Select: std_logic_vector(1 downto 0);
 signal exe_Mem_Read_Address_Select_out,execute_wb_signal_select_out	: std_logic_vector(2 downto 0);
-signal Execute_PC_Out: std_logic_vector(9 downto 0);
-
---Memory outputs
+signal Execute_PC_Out: std_logic_vector(15 downto 0);
+---------------------------------------------------------------------------------------------
+---------------------------------Memory outputs--------------------------------------------------------------
 signal mem_Read_Address, mem_Write_Address, Mem_CCR_Extend,Mem_Write_Data,mem_Read_Data,Imediate_mem_out,mem_Read_Data_out,MEM_WB_ALUResult,MEM_Rs_out,
        mem_input_out,MEM_Rd_out: std_logic_vector(15 downto 0);
-       
-       
 signal  MEM_wb_signal_select_out: std_logic_vector(2 downto 0);
 signal mem_WB_signal_out,mem_destination_select_out,PC_ADDER_COUT:std_logic;
        
---WB outputs
+--------------------------------WB outputs-------------------------------
 signal WB_value:std_logic_vector(15 downto 0);
 
---PC SIGNAL
+---------------------------------PC SIGNAL-------------------------------
 signal PC,PC_IN,PC_ADDER_MUX_OUT,PC_ADDER_OUT,PC_MUX3_OUt: std_logic_vector(15 downto 0); 
 signal Rdst_MUX_OUT : std_logic_vector(15 downto 0);
 
---Instruction Memory
+---------------------------------Instruction Memory-------------------------------
 signal Imediate_Value : std_logic_vector(15 downto 0);
+---------------------end of signals--------------------------
 
 begin
 
---pc register 
+---------------------------------pc register-------------------------------
  PC_ADDER_MUX : Mux2x1 generic map(n=>16) port map("0000000000000001","0000000000000000",PC_ADDER_MUX_SELECT,PC_ADDER_MUx_OUT);
  PC_adder :n_bitAdder generic map(n=>16) port map(PC,PC_ADDER_MUx_OUT,'0',PC_ADDER_COUT,PC_ADDER_OUT);
-PC_SECOUND_MUX : mux2x1 generic map(n=>16 ) port map(exe_Rd_out,Port2dataout,Rdst_signal,Rdst_MUX_OUT);
+PC_SECOUND_MUX : mux2x1 generic map(n=>16 ) port map(exe_Rd_out,Port2dataout,Rdst_signal,Rdst_MUX_OUT);--bta3et ahmed w kamal check!
 PC_THRID_MUX : mux2x1 generic map(n=>16) port map(PC_ADDER_OUT,Rdst_MUX_OUT,JUMP_CALL,PC_MUX3_OUt);
  PCmux :Mux4x1 generic map(n=>16) port map(WB_Value,PC_MUX3_OUt,PC_IN_INT,"0000000000000000",PC_Select,PC_IN);
  PC0: registern generic map(n=>16)  port map(clk,reset, PC_IN,PC,'1');
   ----------------------------------------------------------------------------------
-  --fetch stage  
+  
+  
+  
+  ---------------------------------fetch stage------------------------------- 
   INS_MEM : PFetchUnit port map (clk,PC,Imediate_Value);
  
- --fetch buffer
+ ---------------------------------fetch buffer(if/id)-------------------------------
  
   fetch_Imm_Buffer: registern generic map(n=>16)  port map(clk,reset, Imediate_Value,Imediate_fetch_out,'1'); 
-  fetch_input_Buffer: registern generic map(n=>16)  port map(clk,reset, Input,fetch_input_out,'1');  
+  fetch_input_Buffer: registern generic map(n=>16)  port map(clk,reset, Input,fetch_input_out,'1'); 
+  fetch_pc_buffer: registern generic map(n=>16)  port map(clk,reset, PC,fetch_PC_out,'1'); 
  
 
  ------------------------------------------------------------------------------------------------------------ 
-  --Decode stage
+ 
+  ----------------------------Decode stage--------------------------------------
   
    --Mux select between mem_wb_Rs& mem_wb_Rd  between r-type  and load use Rs instead of Rd
   write_addres_regfile_mux:Mux2x1 generic map(n=>3) port map(Imediate_mem_out(12 downto 10),Imediate_mem_out(15 downto 13),mem_destination_select_out ,W_selector);
@@ -228,12 +234,12 @@ PC_THRID_MUX : mux2x1 generic map(n=>16) port map(PC_ADDER_OUT,Rdst_MUX_OUT,JUMP
                                   mem_WB_signal_out,clk,Reset,dEnable,Read_Enable, 
                                    WB_Value , Port1data,Port2data);
   
-  --Decode Buffer                                
+  --------------Decode Buffer--------------------------                                
   Decode_Imm_Buffer: registern generic map(n=>16)  port map(clk,reset, Imediate_fetch_out,Imediate_Decode_out,'1');                                 
   Decode_Rs_Buffer: registern generic map(n=>16)  port map(clk,reset, Port1data,Port1dataout,'1');
   Decode_Rd_Buffer: registern generic map(n=>16)  port map(clk,reset,Port2data,Port2dataout,'1');
   Decode_SP_Buffer: registern generic map(n=>16)  port map(clk,reset,SP,Decode_SP_Out,'1');  
-  Decode_PC_Buffer: registern generic map(n=>10)  port map(clk,reset,PC,Decode_PC_Out,'1');  
+  Decode_PC_Buffer: registern generic map(n=>16)  port map(clk,reset,fetch_PC_out,Decode_PC_Out,'1');  
   Decode_WB_Dest_Select_Buffer: registern generic map(n=>2)  port map(clk,reset,WB_Dest_Select,Decode_WB_Dest_Select_out,'1');
   Decode_MW_Buffer: reg port map(clk,reset,MW,Decode_MW_out,'1');
   Decode_MR_Buffer: reg  port map(clk,reset,MR,Decode_MR_out,'1');
@@ -245,7 +251,7 @@ PC_THRID_MUX : mux2x1 generic map(n=>16) port map(PC_ADDER_OUT,Rdst_MUX_OUT,JUMP
   Decode_Destination_select_Buffer: reg  port map(clk,reset,destination_select,decode_destination_select_out,'1');
   Decode_aenable_Buffer: reg port map(clk,reset,aenable,decode_aenable_out,'1');
     
-  ----------------------------------------------------------------------------------
+  -----------------------------------end of decode-----------------------------------------------
 
   ccr_mux1_in<=ZeroFlag&negativeFlag&overflowFlag;
 --Mux to select the inputs to the CCR 
@@ -264,13 +270,13 @@ PC_THRID_MUX : mux2x1 generic map(n=>16) port map(PC_ADDER_OUT,Rdst_MUX_OUT,JUMP
   Mux_ASelect:Mux4x1  port map(Port1dataout,EX_MEM_ALUResult,MEM_WB_ALUResult,"0000000000000000",A_SELECT,Alu_input1);
   Mux_BSelect:Mux4x1  port map(Port2dataout,EX_MEM_ALUResult,MEM_WB_ALUResult,Imediate_Decode_out,B_SELECT,Alu_input2);
   alu0:ALU port map(Imediate_Decode_out(9 downto 6),Alu_input1,Alu_input2,ccr_regout(0),decode_aenable_out,result,
-                         carryFlag,ZeroFlag,overflowFlag,negativeFlag);
+                         carryFlag,ZeroFlag,overflowFlag,negativeFlag); --Imediate_Decode_out(9 downto 6)--> alu operation
   
   --ALU Bffers
   EXE_RESULT_Buffer: registern generic map(n=>16)  port map(clk,reset, result,EX_MEM_ALUResult,'1');
   EXE_Imm_Buffer: registern generic map(n=>16)  port map(clk,reset, Imediate_Decode_out,Imediate_Exe_out,'1');
   EXE_SP_Buffer: registern generic map(n=>16)  port map(clk,reset,Decode_SP_Out,Execute_SP_Out,'1'); 
-  EXE_PC_Buffer: registern generic map(n=>10)  port map(clk,reset,Decode_PC_Out,Execute_PC_Out,'1'); 
+  EXE_PC_Buffer: registern generic map(n=>16)  port map(clk,reset,Decode_PC_Out,Execute_PC_Out,'1'); 
   EXE_CCRs1_Buffer: Reg port map(clk,reset,CCR_Select1,Execute_CCR_Select1_out,'1');
   EXE_CCRs2_Buffer: registern generic map(n=>2)  port map(clk,reset,CCR_Select2,Execute_CCR_Select2_out,'1');
   EXE_CCR_Buffer: registern generic map(n=>4)  port map(clk,reset,ccr_regout,exe_ccr_regout,'1');

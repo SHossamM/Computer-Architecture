@@ -276,7 +276,7 @@ PC_THRID_MUX : mux2x1 generic map(n=>16) port map(PC_ADDER_OUT,Rdst_MUX_OUT,JUMP
   EXE_RESULT_Buffer: registern generic map(n=>16)  port map(clk,reset, result,EX_MEM_ALUResult,'1');
   EXE_Imm_Buffer: registern generic map(n=>16)  port map(clk,reset, Imediate_Decode_out,Imediate_Exe_out,'1');
   EXE_SP_Buffer: registern generic map(n=>16)  port map(clk,reset,Decode_SP_Out,Execute_SP_Out,'1'); 
-  EXE_PC_Buffer: registern generic map(n=>10)  port map(clk,reset,Decode_PC_Out,Execute_PC_Out,'1'); 
+  EXE_PC_Buffer: registern generic map(n=>16)  port map(clk,reset,Decode_PC_Out,Execute_PC_Out,'1'); 
   EXE_CCRs1_Buffer: Reg port map(clk,reset,CCR_Select1,Execute_CCR_Select1_out,'1');
   EXE_CCRs2_Buffer: registern generic map(n=>2)  port map(clk,reset,CCR_Select2,Execute_CCR_Select2_out,'1');
   EXE_CCR_Buffer: registern generic map(n=>4)  port map(clk,reset,ccr_regout,exe_ccr_regout,'1');
@@ -337,6 +337,7 @@ PC_THRID_MUX : mux2x1 generic map(n=>16) port map(PC_ADDER_OUT,Rdst_MUX_OUT,JUMP
 
     
 end  first_Integrate_arch;
+
 
 
 

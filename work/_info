@@ -76,7 +76,7 @@ R12
 !s100 >8a^7[1k;9X1?_AS5abXT3
 !i10b 1
 Efirst_integrate
-Z19 w1524181420
+Z19 w1524265110
 R2
 R3
 R4
@@ -89,7 +89,7 @@ Vjni]M_lOWVjRzZNEF=@A;0
 R7
 32
 !i10b 1
-Z22 !s108 1524181425.826000
+Z22 !s108 1524265122.050000
 Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/new_integration.vhd|
 Z24 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/new_integration.vhd|
 R11
@@ -97,11 +97,11 @@ R12
 Afirst_integrate_arch
 R2
 R3
-DEx4 work 15 first_integrate 0 22 jni]M_lOWVjRzZNEF=@A;0
-l202
+Z25 DEx4 work 15 first_integrate 0 22 jni]M_lOWVjRzZNEF=@A;0
+l203
 L20
-Z25 VMUb86V^BzaI`T=YcieS8<2
-!s100 YFk9:hXV0QI:MK`?>VGJc2
+V?T6VliV5LN2z6Ao>3jal92
+!s100 Fgzib]5eREfVIVKAaLj;?0
 R7
 32
 !i10b 1
@@ -348,7 +348,6 @@ DEx4 work 6 mux8x1 0 22 _G]RGN:SdoBY8WW::Uj=L2
 l16
 L15
 VbcjCR0kHRgF:oGV^OWHYP0
-!s100 [PfFGca4faOS_<1;Ia?Mm3
 R7
 32
 R65
@@ -356,6 +355,7 @@ R66
 R67
 R11
 R12
+!s100 [PfFGca4faOS_<1;Ia?Mm3
 !i10b 1
 En_bitadder
 Z68 w1518784095
