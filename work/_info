@@ -76,7 +76,7 @@ R12
 !s100 >8a^7[1k;9X1?_AS5abXT3
 !i10b 1
 Efirst_integrate
-Z19 w1524179052
+Z19 w1524181420
 R2
 R3
 R4
@@ -84,12 +84,12 @@ Z20 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/new_integration.v
 Z21 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/new_integration.vhd
 l0
 L3
-VB1G[NFS`0`kV69TzHQKK`2
-!s100 5?EG@0DoZe4l4zF1i[M>g1
+Vjni]M_lOWVjRzZNEF=@A;0
+!s100 2hIPmYKSWPK5LiD^cSbmD2
 R7
 32
 !i10b 1
-Z22 !s108 1524179067.226000
+Z22 !s108 1524181425.826000
 Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/new_integration.vhd|
 Z24 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/new_integration.vhd|
 R11
@@ -97,11 +97,11 @@ R12
 Afirst_integrate_arch
 R2
 R3
-DEx4 work 15 first_integrate 0 22 B1G[NFS`0`kV69TzHQKK`2
-l189
-L21
-V5[bl3i@F3Acz`CWk3bn5J1
-!s100 NX2h`B>1n=6gWKdY_LBAh1
+DEx4 work 15 first_integrate 0 22 jni]M_lOWVjRzZNEF=@A;0
+l202
+L20
+Z25 VMUb86V^BzaI`T=YcieS8<2
+!s100 YFk9:hXV0QI:MK`?>VGJc2
 R7
 32
 !i10b 1
@@ -111,20 +111,20 @@ R24
 R11
 R12
 Eforwardingunit
-Z25 w1524021522
+Z26 w1524021522
 R2
 R3
 R4
-Z26 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/ForwardingUnit.vhd
-Z27 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/ForwardingUnit.vhd
+Z27 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/ForwardingUnit.vhd
+Z28 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/ForwardingUnit.vhd
 l0
 L4
 VoR3MOM<;4zGh77<J_9dBR1
 R7
 32
-Z28 !s108 1524021596.430000
-Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/ForwardingUnit.vhd|
-Z30 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/ForwardingUnit.vhd|
+Z29 !s108 1524021596.430000
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/ForwardingUnit.vhd|
+Z31 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/ForwardingUnit.vhd|
 R11
 R12
 !s100 HT3BZnRo:d;b8FkgNVeb=0
@@ -138,28 +138,28 @@ L24
 V0d5DOjclAfmaj[H_5_EhQ0
 R7
 32
-R28
 R29
 R30
+R31
 R11
 R12
 !s100 3o<M>DL>>o^3HhHHnK`@U0
 !i10b 1
 Efulladder
-Z31 w1518783306
+Z32 w1518783306
 R2
 R3
 R4
-Z32 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/FullAdder.vhd
-Z33 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/FullAdder.vhd
+Z33 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/FullAdder.vhd
+Z34 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/FullAdder.vhd
 l0
 L4
 VGCZi_QR`zAX;UFK<ne9kd1
 R7
 32
-Z34 !s108 1524175050.489000
-Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/FullAdder.vhd|
-Z36 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/FullAdder.vhd|
+Z35 !s108 1524175050.489000
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/FullAdder.vhd|
+Z37 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/FullAdder.vhd|
 R11
 R12
 !s100 f?POmPLO[NIXY?Gb52kj^2
@@ -173,29 +173,29 @@ L12
 VgATzYj?YL2e<B1K>hlHP@0
 R7
 32
-R34
 R35
 R36
+R37
 R11
 R12
 !s100 =bm@YjcHdo^i;KS_CX05Z0
 !i10b 1
 Ehazarddetection
-Z37 w1523972364
+Z38 w1523972364
 R1
 R2
 R3
 R4
-Z38 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/HazardDetection.vhd
-Z39 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/HazardDetection.vhd
+Z39 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/HazardDetection.vhd
+Z40 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/HazardDetection.vhd
 l0
 L4
 Vh3^Akok:2D2DceNTiRfz:2
 R7
 32
-Z40 !s108 1523972745.366000
-Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/HazardDetection.vhd|
-Z42 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/HazardDetection.vhd|
+Z41 !s108 1523972745.366000
+Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/HazardDetection.vhd|
+Z43 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/HazardDetection.vhd|
 R11
 R12
 !s100 Fd=RaUfNnK9I@]W3B<KRg2
@@ -210,28 +210,28 @@ L12
 V^_NVLT<S]69;OJH<PWY:J3
 R7
 32
-R40
 R41
 R42
+R43
 R11
 R12
 !s100 `PAQ0@SUWGOXXHg1zCm8<3
 !i10b 1
 Emux2x1
-Z43 w1523922777
+Z44 w1523922777
 R2
 R3
 R4
-Z44 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux2x1.vhd
-Z45 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux2x1.vhd
+Z45 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux2x1.vhd
+Z46 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux2x1.vhd
 l0
 L4
 V`N]@>8Ein>QzQ_S@g7AWI0
 R7
 32
-Z46 !s108 1523972745.786000
-Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux2x1.vhd|
-Z48 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux2x1.vhd|
+Z47 !s108 1523972745.786000
+Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux2x1.vhd|
+Z49 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux2x1.vhd|
 R11
 R12
 !s100 DdAifE3>Mm<hZPMN_`T4K0
@@ -245,28 +245,28 @@ L15
 VoNLY`khmo<j^ZfOk@g>HH0
 R7
 32
-R46
 R47
 R48
+R49
 R11
 R12
 !s100 Sj3A8]6e]cA1MPQfhZjHM1
 !i10b 1
 Emux4x1
-Z49 w1523922904
+Z50 w1523922904
 R2
 R3
 R4
-Z50 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux4x1.vhd
-Z51 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux4x1.vhd
+Z51 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux4x1.vhd
+Z52 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux4x1.vhd
 l0
 L4
 V]EQW6oZd_@C<C<@ze4;881
 R7
 32
-Z52 !s108 1523972746.226000
-Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux4x1.vhd|
-Z54 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux4x1.vhd|
+Z53 !s108 1523972746.226000
+Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux4x1.vhd|
+Z55 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux4x1.vhd|
 R11
 R12
 !s100 >MDDY[689b^:2<5l[Sg^O2
@@ -280,28 +280,28 @@ L15
 V5Qg_^YI=1d]29]93[ha1[1
 R7
 32
-R52
 R53
 R54
+R55
 R11
 R12
 !s100 V@XG>2M<mf3EHgLmEQFa60
 !i10b 1
 Emux4x1_1bit
-Z55 w1523983253
+Z56 w1523983253
 R2
 R3
 R4
-Z56 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux4x1_1bit.vhd
-Z57 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux4x1_1bit.vhd
+Z57 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux4x1_1bit.vhd
+Z58 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux4x1_1bit.vhd
 l0
 L5
 Vkdo`fZYJRIT?Oho^g_LU_2
 R7
 32
-Z58 !s108 1523983260.878000
-Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux4x1_1bit.vhd|
-Z60 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux4x1_1bit.vhd|
+Z59 !s108 1523983260.878000
+Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux4x1_1bit.vhd|
+Z61 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux4x1_1bit.vhd|
 R11
 R12
 !s100 A?G>TTF=_Tm54NVk`eP3=1
@@ -315,28 +315,28 @@ L15
 VkoPn7bW3Y6A]0EJ9H]Bi73
 R7
 32
-R58
 R59
 R60
+R61
 R11
 R12
 !s100 @cDfb5`E2R_Y275JHfBGE0
 !i10b 1
 Emux8x1
-Z61 w1524003891
+Z62 w1524003891
 R2
 R3
 R4
-Z62 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux8x1.vhd
-Z63 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux8x1.vhd
+Z63 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux8x1.vhd
+Z64 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux8x1.vhd
 l0
 L4
 V_G]RGN:SdoBY8WW::Uj=L2
 R7
 32
-Z64 !s108 1524003897.400000
-Z65 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux8x1.vhd|
-Z66 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux8x1.vhd|
+Z65 !s108 1524181352.004000
+Z66 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux8x1.vhd|
+Z67 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Mux8x1.vhd|
 R11
 R12
 !s100 YU[iQEP5^Hcb_:n`7MNBf3
@@ -348,30 +348,30 @@ DEx4 work 6 mux8x1 0 22 _G]RGN:SdoBY8WW::Uj=L2
 l16
 L15
 VbcjCR0kHRgF:oGV^OWHYP0
+!s100 [PfFGca4faOS_<1;Ia?Mm3
 R7
 32
-R64
 R65
 R66
+R67
 R11
 R12
-!s100 [PfFGca4faOS_<1;Ia?Mm3
 !i10b 1
 En_bitadder
-Z67 w1518784095
+Z68 w1518784095
 R2
 R3
 R4
-Z68 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/16bitAdder.vhd
-Z69 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/16bitAdder.vhd
+Z69 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/16bitAdder.vhd
+Z70 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/16bitAdder.vhd
 l0
 L3
 VSIHcZK80:=J9:nhnJ;RG:1
 R7
 32
-Z70 !s108 1524175049.989000
-Z71 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/16bitAdder.vhd|
-Z72 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/16bitAdder.vhd|
+Z71 !s108 1524175049.989000
+Z72 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/16bitAdder.vhd|
+Z73 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/16bitAdder.vhd|
 R11
 R12
 !s100 >UDVkdgh<1W;[al2Z:2^Y2
@@ -385,66 +385,66 @@ L12
 VK_58R0HzP`A7UVYdOIm<_2
 R7
 32
-R70
 R71
 R72
+R73
 R11
 R12
 !s100 1i>1DKjU6EH@;`GK2i06M2
 !i10b 1
 Epfetchunit
-Z73 w1523892080
+Z74 w1524180966
 R1
 R2
 R3
 R4
-Z74 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-FetchUnit.vhd
-Z75 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-FetchUnit.vhd
+Z75 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-FetchUnit.vhd
+Z76 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-FetchUnit.vhd
 l0
-L6
+L5
 V9dYG1Pd:cm7^@KON5Vjz=2
 R7
 32
-Z76 !s108 1523994528.395000
-Z77 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-FetchUnit.vhd|
-Z78 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-FetchUnit.vhd|
+Z77 !s108 1524181103.500000
+Z78 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-FetchUnit.vhd|
+Z79 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-FetchUnit.vhd|
 R11
 R12
-!s100 d2Sm9N<7T_`=6AFI37TC73
+!s100 cRDAd6c:hP2;Pz23ElR@_1
 !i10b 1
 Aarchpfetchunit
 R1
 R2
 R3
 DEx4 work 10 pfetchunit 0 22 9dYG1Pd:cm7^@KON5Vjz=2
-l26
-L15
+l25
+L14
 VNc;5>;h4PiCH:E21k@GIc1
 R7
 32
-R76
 R77
 R78
+R79
 R11
 R12
-!s100 M>hPFKlfk]^azMc6U@0H90
+!s100 nk^m5=T0`zI9^JOLZU^D20
 !i10b 1
 Epmemory
-Z79 w1523990282
+Z80 w1523990282
 R1
 R2
 R3
 R4
-Z80 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-Memory.vhd
-Z81 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-Memory.vhd
+Z81 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-Memory.vhd
+Z82 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-Memory.vhd
 l0
 L6
 VBboB9^=Q95d<B=cJM@N3l0
 R7
 32
-Z82 !s108 1523994529.342000
-Z83 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-Memory.vhd|
-Z84 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-Memory.vhd|
+Z83 !s108 1523994529.342000
+Z84 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-Memory.vhd|
+Z85 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-Memory.vhd|
 R11
 R12
 !s100 QCmP@cL<R<Zk=d6`]bM600
@@ -459,29 +459,29 @@ L16
 VSHYC32Z90AELTdGQ]N8om0
 R7
 32
-R82
 R83
 R84
+R85
 R11
 R12
 !s100 E:gmB:4:RJLjEW95aOcBl3
 !i10b 1
 Epmemoryunit
-Z85 w1523804962
+Z86 w1523804962
 R1
 R2
 R3
 R4
-Z86 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-MemoryUnit.vhd
-Z87 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-MemoryUnit.vhd
+Z87 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-MemoryUnit.vhd
+Z88 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-MemoryUnit.vhd
 l0
 L7
 V:le8V6501G8iMY_Jo9]Ee2
 R7
 32
-Z88 !s108 1523994529.710000
-Z89 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-MemoryUnit.vhd|
-Z90 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-MemoryUnit.vhd|
+Z89 !s108 1523994529.710000
+Z90 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-MemoryUnit.vhd|
+Z91 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-MemoryUnit.vhd|
 R11
 R12
 !s100 UB3[bJEDk0T:1Hd`GIkE^2
@@ -496,29 +496,29 @@ L20
 VgOK9KTB7fQ;4ooQ=?BeHU3
 R7
 32
-R88
 R89
 R90
+R91
 R11
 R12
 !s100 5g7KmQV_=WIQ04eUz[`JI0
 !i10b 1
 Epmemoryunitbuffer
-Z91 w1523988206
+Z92 w1523988206
 R1
 R2
 R3
 R4
-Z92 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-MemoryUnitBuffer.vhd
-Z93 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-MemoryUnitBuffer.vhd
+Z93 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-MemoryUnitBuffer.vhd
+Z94 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-MemoryUnitBuffer.vhd
 l0
 L5
 VW`[0Q86;bES2jKQA3b1:=0
 R7
 32
-Z94 !s108 1523994530.160000
-Z95 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-MemoryUnitBuffer.vhd|
-Z96 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-MemoryUnitBuffer.vhd|
+Z95 !s108 1523994530.160000
+Z96 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-MemoryUnitBuffer.vhd|
+Z97 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-MemoryUnitBuffer.vhd|
 R11
 R12
 !s100 1?0PSKIYnJMNFgCV@Vj:j1
@@ -533,29 +533,29 @@ L58
 VP79gnb1n;aR3eDe`ALg[k1
 R7
 32
-R94
 R95
 R96
+R97
 R11
 R12
 !s100 T`fAMH[O<Ri2S@LY7XhYS2
 !i10b 1
 Epmemwb
-Z97 w1523986886
+Z98 w1523986886
 R1
 R2
 R3
 R4
-Z98 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-TEST-Mem-WB.vhd
-Z99 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-TEST-Mem-WB.vhd
+Z99 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-TEST-Mem-WB.vhd
+Z100 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-TEST-Mem-WB.vhd
 l0
 L5
 VmPbPB]aeO@10;;593R7Hh3
 R7
 32
-Z100 !s108 1523994530.901000
-Z101 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-TEST-Mem-WB.vhd|
-Z102 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-TEST-Mem-WB.vhd|
+Z101 !s108 1523994530.901000
+Z102 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-TEST-Mem-WB.vhd|
+Z103 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-TEST-Mem-WB.vhd|
 R11
 R12
 !s100 gfi_X1L7AR2L?@i_Y^bhW0
@@ -570,29 +570,29 @@ L46
 V?;BomV@kelGT[S04QV0cK3
 R7
 32
-R100
 R101
 R102
+R103
 R11
 R12
 !s100 SdLV?EVT0b14[mPZEPWJO0
 !i10b 1
 Epmfetchunitbuffer
-Z103 w1523892672
+Z104 w1523892672
 R1
 R2
 R3
 R4
-Z104 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-FetchUnitBuffer.vhd
-Z105 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-FetchUnitBuffer.vhd
+Z105 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-FetchUnitBuffer.vhd
+Z106 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-FetchUnitBuffer.vhd
 l0
 L6
 VQBFEFXnU]jjUA0LlLnH5o1
 R7
 32
-Z106 !s108 1523994528.882000
-Z107 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-FetchUnitBuffer.vhd|
-Z108 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-FetchUnitBuffer.vhd|
+Z107 !s108 1523994528.882000
+Z108 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-FetchUnitBuffer.vhd|
+Z109 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-FetchUnitBuffer.vhd|
 R11
 R12
 !s100 _aIbjk_K2^8Bk^dgOz3gH2
@@ -607,29 +607,29 @@ L28
 V@Q6UZTah8ZW3AY@1YCGA=3
 R7
 32
-R106
 R107
 R108
+R109
 R11
 R12
 !s100 7dRFSBl:`Rl9z]f?liGZF3
 !i10b 1
 Epstaticpredictionunit
-Z109 w1523790928
+Z110 w1523790928
 R1
 R2
 R3
 R4
-Z110 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-StaticPredictionUnit.vhd
-Z111 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-StaticPredictionUnit.vhd
+Z111 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-StaticPredictionUnit.vhd
+Z112 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-StaticPredictionUnit.vhd
 l0
 L7
 VzPz56]@W@bkT[J>?<O]L:3
 R7
 32
-Z112 !s108 1523994530.491000
-Z113 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-StaticPredictionUnit.vhd|
-Z114 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-StaticPredictionUnit.vhd|
+Z113 !s108 1523994530.491000
+Z114 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-StaticPredictionUnit.vhd|
+Z115 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-StaticPredictionUnit.vhd|
 R11
 R12
 !s100 Mz]B_j6In?eg7CG2V?BXN0
@@ -644,29 +644,29 @@ L17
 V05lhPIG[Y]bDb92D[K5ZI3
 R7
 32
-R112
 R113
 R114
+R115
 R11
 R12
 !s100 Gh<S_CJfP==Ye@KUaY8X70
 !i10b 1
 Epwriteback
-Z115 w1523978834
+Z116 w1523978834
 R1
 R2
 R3
 R4
-Z116 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-WritebackUnit.vhd
-Z117 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-WritebackUnit.vhd
+Z117 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-WritebackUnit.vhd
+Z118 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-WritebackUnit.vhd
 l0
 L5
 VN_km`[XQoW>mPlMT?J>MN1
 R7
 32
-Z118 !s108 1523994531.281000
-Z119 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-WritebackUnit.vhd|
-Z120 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-WritebackUnit.vhd|
+Z119 !s108 1523994531.281000
+Z120 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-WritebackUnit.vhd|
+Z121 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-WritebackUnit.vhd|
 R11
 R12
 !s100 KN7=jTZk2cU:`lli=H6Lk0
@@ -681,29 +681,29 @@ L20
 VZSK1caC7EbdzDbc[cZed]0
 R7
 32
-R118
 R119
 R120
+R121
 R11
 R12
 !s100 Ro5R=]M^0;eg5gMhd`L3[0
 !i10b 1
 Eram
-Z121 w1520731568
+Z122 w1520731568
 R1
 R2
 R3
 R4
-Z122 8E:/CCE Files/Semster6/arch/spring18/labs/lab6/mem.vhd
-Z123 FE:/CCE Files/Semster6/arch/spring18/labs/lab6/mem.vhd
+Z123 8E:/CCE Files/Semster6/arch/spring18/labs/lab6/mem.vhd
+Z124 FE:/CCE Files/Semster6/arch/spring18/labs/lab6/mem.vhd
 l0
 L6
 VFll0Y<l;??7h>^Lm>CWmz3
 R7
 32
-Z124 !s108 1523989287.947000
-Z125 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/labs/lab6/mem.vhd|
-Z126 !s107 E:/CCE Files/Semster6/arch/spring18/labs/lab6/mem.vhd|
+Z125 !s108 1523989287.947000
+Z126 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/labs/lab6/mem.vhd|
+Z127 !s107 E:/CCE Files/Semster6/arch/spring18/labs/lab6/mem.vhd|
 R11
 R12
 !s100 I_lFk[WWf<4am3EZDnhoG0
@@ -718,28 +718,28 @@ L17
 VbQBR8Zzbedim:cfz@P2D72
 R7
 32
-R124
 R125
 R126
+R127
 R11
 R12
 !s100 k49LfVo]e:=F5DN[YZ@FB2
 !i10b 1
 Ereg
-Z127 w1523984436
+Z128 w1523984436
 R2
 R3
 R4
-Z128 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/QProject-registerBit.vhd
-Z129 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/QProject-registerBit.vhd
+Z129 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/QProject-registerBit.vhd
+Z130 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/QProject-registerBit.vhd
 l0
 L4
 VH4K[eH><_@VcM=K@agI0R3
 R7
 32
-Z130 !s108 1523998117.986000
-Z131 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/QProject-registerBit.vhd|
-Z132 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/QProject-registerBit.vhd|
+Z131 !s108 1523998117.986000
+Z132 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/QProject-registerBit.vhd|
+Z133 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/QProject-registerBit.vhd|
 R11
 R12
 !s100 =MoB6`f`;de[bmWZ_VnUR1
@@ -753,28 +753,28 @@ L12
 VaMoQ6XkN9R6fhaojB48:<2
 R7
 32
-R130
 R131
 R132
+R133
 R11
 R12
 !s100 cb3eQGQgz]QYol6kLJ1Jz2
 !i10b 1
 Eregisterfile
-Z133 w1524166007
+Z134 w1524166007
 R2
 R3
 R4
-Z134 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/decoder.vhd
-Z135 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/decoder.vhd
+Z135 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/decoder.vhd
+Z136 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/decoder.vhd
 l0
 L3
 VQno`6ELM9RFA9Oa4^`7hf2
 R7
 32
-Z136 !s108 1524166013.933000
-Z137 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/decoder.vhd|
-Z138 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/decoder.vhd|
+Z137 !s108 1524166013.933000
+Z138 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/decoder.vhd|
+Z139 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/decoder.vhd|
 R11
 R12
 !s100 f3>DUHXKl9YK66:f_=j^@3
@@ -788,28 +788,28 @@ L11
 VdFNGQBT535Ynza]l=]RRA2
 R7
 32
-R136
 R137
 R138
+R139
 R11
 R12
 !s100 7nTj[0dVL?T0jfdYn^d[<2
 !i10b 1
 Eregistern
-R37
+R38
 R2
 R3
 R4
-Z139 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/register.vhd
-Z140 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/register.vhd
+Z140 8E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/register.vhd
+Z141 FE:/CCE Files/Semster6/arch/spring18/Computer-Architecture/register.vhd
 l0
 L4
 V1ciPEYOQ]SdU]4;e=IiON2
 R7
 32
-Z141 !s108 1523972746.666000
-Z142 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/register.vhd|
-Z143 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/register.vhd|
+Z142 !s108 1523972746.666000
+Z143 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/register.vhd|
+Z144 !s107 E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/register.vhd|
 R11
 R12
 !s100 e^aCnBlNU?[M6U2VhBBlN2
@@ -823,9 +823,9 @@ L12
 VhK^lDSn302IYWzC@d=d0T3
 R7
 32
-R141
 R142
 R143
+R144
 R11
 R12
 !s100 kggkkikZmF0S7Y;@Tjc4a1

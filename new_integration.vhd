@@ -4,9 +4,8 @@ Entity first_Integrate is
   port(--inputs
         port1_selec,port2_selec,Mem_Read_Address_Select,wb_signal_select : in std_logic_vector(2 downto 0);
         alu_op_select,CCR_Select2, WB_Dest_Select, Mem_Write_Address_Select,PC_Select : in Std_logic_vector(1 downto 0);
-        CCR_Select1,clk,Reset,Aenable,DEnable,Read_Enable,destination_select, MR,MW,WB_signal ,PC_ADDER_MUX_SELECT: in std_logic ;
-        Imediate_Value, SP,Input : in std_logic_vector(15 downto 0);
-         PC_IN_int:in std_logic_vector(9 downto 0);
+        CCR_Select1,clk,Reset,Aenable,DEnable,Read_Enable,destination_select, MR,MW,WB_signal ,PC_ADDER_MUX_SELECT,Rdst_signal,JUMP_CALL: in std_logic ;
+         SP,Input,PC_IN_INT : in std_logic_vector(15 downto 0);
          control_a_select,control_b_select:in std_logic_vector(1 downto 0) ;
          --outputs
         OUTput_port :out std_logic_vector(15 downto 0);
@@ -61,7 +60,17 @@ generic(n:integer:=16);
        );
      
 end component;
-  
+
+--fetch memory component
+  component PFetchUnit is
+port( 
+	clk : in std_logic;
+	PC:   in std_logic_vector(15 downto 0);
+	
+	Inst: out std_logic_vector(15 downto 0)
+);
+end  component;
+
   --register file
 component Registerfile is
 port(
@@ -184,29 +193,37 @@ signal mem_WB_signal_out,mem_destination_select_out,PC_ADDER_COUT:std_logic;
 signal WB_value:std_logic_vector(15 downto 0);
 
 --PC SIGNAL
-signal PC,PC_IN,pc_40,PC_ADDER_MUX_OUT,PC_ADDER_OUT: std_logic_vector(9 downto 0); 
+signal PC,PC_IN,PC_ADDER_MUX_OUT,PC_ADDER_OUT,PC_MUX3_OUt: std_logic_vector(15 downto 0); 
+signal Rdst_MUX_OUT : std_logic_vector(15 downto 0);
+
+--Instruction Memory
+signal Imediate_Value : std_logic_vector(15 downto 0);
 
 begin
 
 --pc register 
- --PC_ADDER_MUX : Mux2x1 generic map(n=>10) port map("0000000001","0000000000",PC_ADDER_MUX_SELECT,PC_ADDER_MUx_OUT);
- --PC_adder :n_bitAdder generic map(n=>10) port map(PC,PC_ADDER_MUx_OUT,'0',PC_ADDER_COUT,PC_ADDER_OUT);
- -- PC_SECOUND_MUX : mux2x1 generic map(n=>10 ) port map()
- --PCmux:Mux4x1 generic map(n=>10) port map(WB_Value,pc_40,PC_IN_INT,"0000000000",PC_Select,PC_IN);
- --PC0: registern generic map(n=>10)  port map(clk,reset, PC_IN,PC,'1');
-    
---Mux select between mem_wb_Rs& mem_wb_Rd  between r-type  and load use Rs instead of Rd
-  mux0:Mux2x1 generic map(n=>3) port map(Imediate_mem_out(12 downto 10),Imediate_mem_out(15 downto 13),mem_destination_select_out ,W_selector);
-  
- ------------------------------------------------------------------------------------------------------------ 
+ PC_ADDER_MUX : Mux2x1 generic map(n=>16) port map("0000000000000001","0000000000000000",PC_ADDER_MUX_SELECT,PC_ADDER_MUx_OUT);
+ PC_adder :n_bitAdder generic map(n=>16) port map(PC,PC_ADDER_MUx_OUT,'0',PC_ADDER_COUT,PC_ADDER_OUT);
+PC_SECOUND_MUX : mux2x1 generic map(n=>16 ) port map(exe_Rd_out,Port2dataout,Rdst_signal,Rdst_MUX_OUT);
+PC_THRID_MUX : mux2x1 generic map(n=>16) port map(PC_ADDER_OUT,Rdst_MUX_OUT,JUMP_CALL,PC_MUX3_OUt);
+ PCmux :Mux4x1 generic map(n=>16) port map(WB_Value,PC_MUX3_OUt,PC_IN_INT,"0000000000000000",PC_Select,PC_IN);
+ PC0: registern generic map(n=>16)  port map(clk,reset, PC_IN,PC,'1');
+  ----------------------------------------------------------------------------------
+  --fetch stage  
+  INS_MEM : PFetchUnit port map (clk,PC,Imediate_Value);
+ 
  --fetch buffer
  
   fetch_Imm_Buffer: registern generic map(n=>16)  port map(clk,reset, Imediate_Value,Imediate_fetch_out,'1'); 
   fetch_input_Buffer: registern generic map(n=>16)  port map(clk,reset, Input,fetch_input_out,'1');  
  
- 
- 
+
+ ------------------------------------------------------------------------------------------------------------ 
   --Decode stage
+  
+   --Mux select between mem_wb_Rs& mem_wb_Rd  between r-type  and load use Rs instead of Rd
+  write_addres_regfile_mux:Mux2x1 generic map(n=>3) port map(Imediate_mem_out(12 downto 10),Imediate_mem_out(15 downto 13),mem_destination_select_out ,W_selector);
+
   decode0: Registerfile port map(port1_selec,port2_selec,W_selector,
                                   mem_WB_signal_out,clk,Reset,dEnable,Read_Enable, 
                                    WB_Value , Port1data,Port2data);

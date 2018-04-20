@@ -169,6 +169,23 @@ Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
 -- Compiling entity Mux8x1
 -- Compiling architecture Mux8x1_arch of Mux8x1
 
+} {} {}} {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/new_integration.vhd} {1 {vcom -work work -2002 -explicit {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/new_integration.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity first_Integrate
+-- Compiling architecture first_Integrate_arch of first_Integrate
+
+} {} {}} {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-FetchUnit.vhd} {1 {vcom -work work -2002 -explicit {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-FetchUnit.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity PFetchUnit
+-- Compiling architecture archPFetchUnit of PFetchUnit
+
 } {} {}} {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/decoder.vhd} {1 {vcom -work work -2002 -explicit {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/decoder.vhd}
 Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
 -- Loading package STANDARD
@@ -184,14 +201,5 @@ Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
 -- Loading package std_logic_1164
 -- Compiling entity n_bitAdder
 -- Compiling architecture arch_n_bitadder of n_bitAdder
-
-} {} {}} {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-FetchUnit.vhd} {1 {vcom -work work -2002 -explicit {E:/CCE Files/Semster6/arch/spring18/Computer-Architecture/Project-FetchUnit.vhd}
-Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity PFetchUnit
--- Compiling architecture archPFetchUnit of PFetchUnit
 
 } {} {}}
