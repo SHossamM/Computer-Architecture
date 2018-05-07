@@ -62,10 +62,12 @@ public class Assembler {
 public static void Assembl(File file)throws IOException 
    {
        try {
-
+         int count=0;
         Scanner scanner = new Scanner(file);
         FileOutputStream fos = new FileOutputStream("instructions.mem");
 	BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
+        bw.write("//format=mti addressradix=d dataradix=b version=1.0 wordsperline=1");
+        bw.newLine();
         String Inst15_10="";
         String Inst9_6="";
         String Inst5_3="";
@@ -327,11 +329,11 @@ public static void Assembl(File file)throws IOException
              }
              
              
-                bw.write(Inst15_10+Inst9_6+Inst5_3+Inst2_0);
+                bw.write("   "+(count++)+":   "+Inst15_10+Inst9_6+Inst5_3+Inst2_0);
                 bw.newLine();
                 if(Imm!="")
                 {
-                 bw.write(Imm);
+                 bw.write("   "+(count++)+":   "+Imm);
                  bw.newLine();
                  Imm="";
                  

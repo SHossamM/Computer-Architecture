@@ -154,8 +154,7 @@ begin
   --ALU stage
   mux3:Mux4x1  port map(Port1dataout,EX_MEM_ALUResult,MEM_WB_ALUResult,"0000000000000000",A_SELECT,Alu_input1);
   mux4:Mux4x1  port map(Port2dataout,EX_MEM_ALUResultout,MEM_WB_ALUResult,Imediate_Valueout,B_SELECT,Alu_input2);
-  mux5:Mux4x1  port map("1100","1101",aluOperation,aluOperation,AlU_OP_select,selectedfunction);  
-  alu0:ALU port map(selectedfunction,Alu_input1,Alu_input2,ccr_regout(0),aenable,result,
+  alu0:ALU port map(aluOperation,Alu_input1,Alu_input2,ccr_regout(0),aenable,result,
                          carryFlag,ZeroFlag,overflowFlag,negativeFlag);
    
   ----------------------------------------------------------------------------------
@@ -163,8 +162,8 @@ begin
  aluresult_buff: registern generic map(n=>16)  port map(clk,reset,EX_MEM_ALUResult,EX_MEM_ALUResultout,'1'); 
  ex_imm_buff: registern generic map(n=>16)  port map(clk,reset,Imediate_Valueout,ex_Imediate_Valueout,'1');
  exec_sp_buff:registern generic map(n=>16)  port map(clk,reset,dec_spout,exec_spout,'1');
- exec_ccrs1_buff:registern generic map(n=>2)  port map(clk,reset,CCR_Select2,exec_CCR_Select2out,'1');
- exec_ccrs2_buff:reg port map(clk,reset,CCR_Select2,exec_CCR_Select1out,'1');
+ exec_ccrs2_buff:registern generic map(n=>2)  port map(clk,reset,CCR_Select2,exec_CCR_Select2out,'1');
+ exec_ccrs1_buff:reg port map(clk,reset,CCR_Select1,exec_CCR_Select1out,'1');
   
   
   

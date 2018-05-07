@@ -1,7 +1,7 @@
 // memory data file (do not edit the following line - required for mem load use)
 // instance=/pmemwb/memoryunit/mem/ram
 // format=mti addressradix=d dataradix=h version=1.0 wordsperline=1
-   0: XXXX
+   0: 0000000000000001
    1: XXXX
    2: XXXX
    3: XXXX

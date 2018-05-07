@@ -3,7 +3,7 @@ Use ieee.std_logic_1164.all;
 Entity Dcode_ALU_Integrate is
   port(--inputs
         port1_selec,port2_selec,mem_wb_Rs,mem_wb_Rd : in std_logic_vector(2 downto 0);
-        alu_op_select,CCR_Select2,A_Select,B_Select : in Std_logic_vector(1 downto 0);
+        CCR_Select2,A_Select,B_Select : in Std_logic_vector(1 downto 0);
         CCR_Select1,W_Enable,clk,Reset,Aenable,DEnable,Read_Enable,destination_select : in std_logic ;
         W_Value,WB_Result,Imediate_Value,MEM_WB_ALUResult,sp : in std_logic_vector(15 downto 0);
         aluOperation:in std_logic_vector(3 downto 0);
@@ -154,8 +154,7 @@ begin
   --ALU stage
   mux3:Mux4x1  port map(Port1dataout,EX_MEM_ALUResult,MEM_WB_ALUResult,"0000000000000000",A_SELECT,Alu_input1);
   mux4:Mux4x1  port map(Port2dataout,EX_MEM_ALUResultout,MEM_WB_ALUResult,Imediate_Valueout,B_SELECT,Alu_input2);
-  mux5:Mux4x1  port map("1100","1101",aluOperation,aluOperation,AlU_OP_select,selectedfunction);  
-  alu0:ALU port map(selectedfunction,Alu_input1,Alu_input2,ccr_regout(0),aenable,result,
+  alu0:ALU port map(aluOperation,Alu_input1,Alu_input2,ccr_regout(0),aenable,result,
                          carryFlag,ZeroFlag,overflowFlag,negativeFlag);
    
   ----------------------------------------------------------------------------------

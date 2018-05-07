@@ -21,8 +21,8 @@ Architecture ALU_arch of ALU is
                       '0'&(signed(a)-signed(b))     when "0010",--SUB
                       '0'&(signed(a) and signed(b)) when"0011",--AND
                       '0'&(signed(a) or signed(b))  when"0100",--OR
-                      signed(a(15)& a(14 downto 0)&cin)      when"0101",--RLC
-                      signed(a(0)&cin&a(15 downto 1))      when"0111",--RRC
+                      signed(b(15)& b(14 downto 0)&cin)      when"0101",--RLC
+                      signed(b(0)&cin&b(15 downto 1))      when"0111",--RRC
                       '0'&(signed(a) sll to_integer(signed(b)) )     when"1000",--sHL
                       '0'&((signed(a)) srl to_integer(signed(b)) )     when"1001",--SHR
                       '0'&(not (signed(a))  )             when"1010",--NOT

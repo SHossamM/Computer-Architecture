@@ -4,39 +4,49 @@ use ieee.numeric_std.all;
 
 Entity ControlUnit is
 port (
+  PC_Select: out std_logic_vector(1 downto 0); --PC MUX Selection
+	PC_ADDER_MUX_SELECT,RdestSignal,JumpCall: out std_logic;
+	CCR_Select1: out std_logic; --ALU Flags OR Restoring from WB
+	CCR_Select2: out std_logic_vector(1 downto 0); -- CLRC , SETC , ALU CF , Restore WB(0)
+	CCR_Enable: out std_logic; --Enable the CCR Register
+	Decode_ReadEnable : out std_logic ;
+	ALUEnable,DecodeEnable: out std_logic;
+	RegWrite: out std_logic;
+	control_a_select: out std_logic_vector(1 downto 0); --TO FORWARDING UNIT
+	control_b_select: out std_logic_vector(1 downto 0);
+	MR: out std_logic; --Memory Read
+	MW: out std_logic; --Memory Write
+	Mem_Read_Address_Select: out std_logic_vector(2 downto 0); --Read Address MUX Selection
+	Mem_Write_Address_Select: out std_logic_vector(1 downto 0); --Write Address MUX Selection
+	WB_Dest_Select: out std_logic_vector(1 downto 0); --Write Data In Memory Select
+	Flush: out std_logic;
+	wb_signal_select: out std_logic_vector (2 downto 0);
+	ControlSelect: out std_logic; -- To choose whether to stall or to produce control signals
+	Sp_Enable: out std_logic;
+
 	opcode: in std_logic_vector (5 downto 0);
 	fn: in std_logic_vector(3 downto 0);
 	Interrupt: in std_logic;
 	Reset: in std_logic;
-	FlushFromStaticPrediction: in std_logic;
-	ALUEnable: out std_logic;
-	RegWrite: out std_logic;
-	wb_signal_select: out std_logic_vector (2 downto 0);
-	MR: out std_logic; --Memory Read
-	MW: out std_logic; --Memory Write
-	RdestSignal: out std_logic;
-	JumpCall: out std_logic;
-	Flush: out std_logic;
-	ControlSelect: out std_logic; -- To choose whether to stall or to produce control signals
-	SWE: out std_logic;
-	PC_Select: out std_logic_vector(1 downto 0); --PC MUX Selection
-	Mem_Read_Address_Select: out std_logic_vector(2 downto 0); --Read Address MUX Selection
-	Mem_Write_Address_Select: out std_logic_vector(1 downto 0); --Write Address MUX Selection
-	WB_Dest_Select: out std_logic_vector(1 downto 0); --Write Data In Memory Select
-	CCR_Select1: out std_logic; --ALU Flags OR Restoring from WB
-	CCR_Select2: out std_logic_vector(1 downto 0); -- CLRC , SETC , ALU CF , Restore WB(0)
-	CCR_Enable: out std_logic; --Enable the CCR Register
-	control_a_select: out std_logic_vector(1 downto 0); --TO FORWARDING UNIT
-	control_b_select: out std_logic_vector(1 downto 0);
-	destination_select: out std_logic --SELECT REGISTER ADDRESS IN REGISTER FILE TO WRITE IN
+	FlushFromStaticPrediction: in std_logic
 );
 end entity ControlUnit;
 
 architecture archControlUnit of ControlUnit is
+signal Stall_call_counter ,Stall_arthemtic_counter : std_logic;
+
 begin
+	  -- finite state machine for stall 1 cycle after jmp or call
+	 Stall_call_counter <= '0' when Reset ='1' else
+	                       '1' when opcode="100011" and Interrupt='0' and Reset='0' and Stall_call_counter='0' else --call
+	                       '1' when opcode="100010" and Interrupt='0' and Reset='0' and Stall_call_counter='0' else --jmp
+	                       '0';
+	 
+	 
+	 
 	 
 ALUEnable <= '1' when opcode="000000" and Interrupt='0' and Reset='0' else --ADD
-	     '0';
+	           '0';
 
 
 RegWrite <=  '1' when opcode="000000" and Interrupt='0' and Reset='0' else --ADD
@@ -53,17 +63,17 @@ wb_signal_select <= "000" when opcode="010110" and Interrupt='0' and Reset='0' e
 		    "001" when opcode="010100" and Interrupt='0' and Reset='0' else --RET
 		    "001" when opcode="010001" and Interrupt='0' and Reset='0' else --POP
 
-		    "010" when opcode="000000" and Interrupt='0' and Reset='0' else --ADD  --Output 2 ALU Result
+		    "010" when opcode="000000" and Interrupt='0' and Reset='0' else ---TYPE  --Output 2 ALU Result
+       
+		    
 
-		    ---------------------- OUTPUT 3??????????????------------------
+		    "011" when opcode="100100" and Interrupt='0' and Reset='0' else --JZ  --Output 3 Rd Value 
+		    "011" when opcode="100010" and Interrupt='0' and Reset='0' else --JC
+		    "011" when opcode="100101" and Interrupt='0' and Reset='0' else --JN
+		    "011" when opcode="100010" and Interrupt='0' and Reset='0' else --JMP
+		    "011" when opcode="100011" and Interrupt='0' and Reset='0' else --CALL
 
-		    "100" when opcode="100100" and Interrupt='0' and Reset='0' else --JZ  --Output 4 Rd Value 
-		    "100" when opcode="100010" and Interrupt='0' and Reset='0' else --JC
-		    "100" when opcode="100101" and Interrupt='0' and Reset='0' else --JN
-		    "100" when opcode="100010" and Interrupt='0' and Reset='0' else --JMP
-		    "100" when opcode="100011" and Interrupt='0' and Reset='0' else --CALL
-
-		    "101" when opcode="010011" and Interrupt='0' and Reset='0' else --IN  --Output 5 INPUT
+		    "100" when opcode="010011" and Interrupt='0' and Reset='0' else --IN  --Output 4 INPUT
 		    "000";
 
 
@@ -78,24 +88,22 @@ MR <= '1' when opcode="010001" and Interrupt='0' and Reset='0' else --POP
 MW <= '1' when opcode="011000" and Interrupt='0' and Reset='0' else --STD
       '1' when opcode="100011" and Interrupt='0' and Reset='0' else --CALL
       '1' when opcode="010000" and Interrupt='0' and Reset='0' else --PUSH
+      '1' when Interrupt='1' and Reset='0' else 
       '0';
 
 
-RdestSignal <= '0' when FlushFromStaticPrediction='1' else
-	       '1' when opcode="100010" and Interrupt='0' and Reset='0' else --JC
-	       '1' when opcode="100100" and Interrupt='0' and Reset='0' else --JZ
-	       '1' when opcode="100101" and Interrupt='0' and Reset='0' else --JN
-	       '0';
+RdestSignal <= '1' when FlushFromStaticPrediction='1' else
+                '0' ;
 
-
-JumpCall <= '1' when FlushFromStaticPrediction='1' else
-	    '1' when opcode="100010" and Interrupt='0' and Reset='0' else --JMP
-	    '1' when opcode="100011" and Interrupt='0' and Reset='0' else --CALL
+JumpCall <= '1' when FlushFromStaticPrediction='1' else    --all kinds of conditional JMP
+	          '1' when opcode="100010" and Interrupt='0' and Reset='0' else --JMP
+	          '1' when opcode="100011" and Interrupt='0' and Reset='0' else --CALL
             '0'; 
-
 
 Flush <= '1' when opcode="100010" and Interrupt='0' and Reset='0' else --JMP
 	 '1' when opcode="100011" and Interrupt='0' and Reset='0' else --CALL
+	 '1' when FlushFromStaticPrediction='1' else
+	 '1' when Reset='1' else
 	 '0'; 
 
 
@@ -107,24 +115,22 @@ ControlSelect <= '1' when opcode="000000" and fn="1000" and Interrupt='0' and Re
 		 '1' when opcode="011000" and Interrupt='0' and Reset='0' else  --STD
 		 '0';
 
+
+
+
+
+
+
 --SP WRITE ENABLE
 --SWE <= 
 
---hna fe confusion bnsba ll jmps n5tar a 22 wla 40 ka slka 22 wb value 40 mux el jmp call
-PC_Select <= "00" when opcode="100100" and Interrupt='0' and Reset='0' else  --JZ
-	     "00" when opcode="100010" and Interrupt='0' and Reset='0' else  --JC
-	     "00" when opcode="100101" and Interrupt='0' and Reset='0' else  --JN
-	     "00" when opcode="100010" and Interrupt='0' and Reset='0' else  --JMP
-	     "00" when opcode="100011" and Interrupt='0' and Reset='0' else  --CALL
-	     "00" when opcode="010100" and Interrupt='0' and Reset='0' else  --RET
-	     "00" when opcode="010101" and Interrupt='0' and Reset='0' else  --RTI
-
-	     --"01" ????????
-
-	     "10" when Reset='1' else
-	     "11" when Interrupt='1' else
+PC_Select <= "00" when opcode="010101" and Reset='0' and Interrupt='0' else -- reti
+              "00" when opcode="010100" and Reset='0' and Interrupt='0' else -- ret
+	     "10" when Reset='1' else   --MEM[0]
+	     "11" when Interrupt='1' else  --MEM[1]
 	     "01"; --EL MAFROD TB2A PC +1 ( TO BE HANDLED)
 
+PC_ADDER_MUX_SELECT  <= '0';
 
 --OSMAN ??????????????????????????????? check el lo7a
 Mem_Read_Address_Select <= --Stack Pointer to be handled after change(tl3nah bara) ++SP
@@ -172,9 +178,9 @@ control_b_select <= "11" when opcode="000000" and fn="1000" and Interrupt='0' an
 		    "00" when opcode="000000" and Interrupt='0' and Reset='0' else --R TYPE
 		    "00";
 		    
-
-destination_select <= '1' when opcode="000000" and Interrupt='0' and Reset='0' else --R TYPE
-		      '0';
+--TO BE CONTINUED
+--destination_select <= '1' when opcode="000000" and Interrupt='0' and Reset='0' else --R TYPE --shelnaha 5ales
+	--	      '0';
 
 
 end architecture archControlUnit;
